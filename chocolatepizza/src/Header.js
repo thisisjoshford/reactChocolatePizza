@@ -15,7 +15,7 @@ export default class Header extends Component {
         return(
             <div>
                 <div id = "delicious">
-                    <img id="logo" src={this.props.logo}/>
+                    <img id="logo" src={this.props.mainLogo}/>
                     <div id= "Title">
                         <p id="del">Delicious</p>
                         <p className="gray" id="description">The best food blog on the web</p>

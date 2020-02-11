@@ -1,16 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
-
 export default class Body extends Component {
 
-   
     render() {
-
         const infoArray = this.props.text
         const infoElements = infoArray.map(object => {
         return <p className="instructions">{object.info}</p>
         });
-
         return(
             <div>
                 <article>
