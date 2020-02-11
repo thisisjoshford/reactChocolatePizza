@@ -1,27 +1,28 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
+import './Header.css'
+
 
 export default class Header extends Component {
     render() {
+        // create a variable containing the array of objects (url and alt)
+        const linksArray = this.props.links
+        //make a new array with .map that returns <img> tags for each object in array
+        const linksElements = linksArray.map(object => {
+            return <img alt={object.alt_text} src={object.url}/>
+        });
+
         return(
             <div>
                 <div id = "delicious">
                     <img id="logo" src={this.props.logo}/>
                     <div id= "Title">
                         <p id="del">Delicious</p>
-                        <p class="gray" id="description">The best food blog on the web</p>
+                        <p className="gray" id="description">The best food blog on the web</p>
                     </div>
                 </div>
-                <div id = "navigation">
-                    <img src="fb-icon.png"/>
-                    <img src="twit-icon.png"/>
-                    <img src="gp-icon.png"/>
-                    <img src="insta-icon.png"/>
-                    <img src="flic-icon.png"/>
-                    <img src="pint-icon.png"/>
+                <div id = "navigation"> {linksElements}
                     
-                    <img src="rss-icon.png"/>
-                    <img src="mail-icon.png"/>
                 </div>
             </div>
          
